@@ -41,10 +41,11 @@
         android:text="ADD"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnSub"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.483" />
 
     <TextView
         android:id="@+id/result"
@@ -64,16 +65,16 @@
         android:id="@+id/btnSub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
         android:layout_marginBottom="216dp"
         android:background="@android:color/darker_gray"
         android:text="SUB"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.765"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintStart_toEndOf="@+id/button"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.731" />
+        app:layout_constraintVertical_bias="0.708" />
 </androidx.constraintlayout.widget.ConstraintLayout>
