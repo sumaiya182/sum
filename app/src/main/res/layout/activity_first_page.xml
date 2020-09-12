@@ -8,16 +8,32 @@
     tools:context=".FirstPageActivity">
 
     <Button
-        android:id="@+id/btnGo"
+        android:id="@+id/btnScientific"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/holo_blue_bright"
-        android:text="GO"
+        android:text="Scientific"
         android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.582" />
+
+    <Button
+        android:id="@+id/btnNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_bright"
+        android:text="Normal"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.374" />
 
     <TextView
         android:id="@+id/textView"

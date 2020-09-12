@@ -13,7 +13,10 @@ public class MainActivity extends AppCompatActivity {
     private EditText input2;
     private Button addBtn;
     private Button subBtn;
+    private Button multBtn;
+    private Button divBtn;
     private TextView result;
+    private TextView resultOp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +25,12 @@ public class MainActivity extends AppCompatActivity {
 
         input1 = (EditText)findViewById(R.id.input1);
         input2 = (EditText)findViewById(R.id.input2);
-        addBtn = (Button)findViewById(R.id.button);
+        addBtn = (Button)findViewById(R.id.btnAdd);
         subBtn = (Button)findViewById(R.id.btnSub);
+        multBtn = (Button)findViewById(R.id.btnMulti);
+        divBtn = (Button)findViewById(R.id.btnDiv);
         result = (TextView) findViewById(R.id.result);
+        resultOp = (TextView) findViewById(R.id.resultOp);
 
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 int b = Integer.parseInt(input2.getText().toString());
                 int c = a + b;
                 result.setText("Result: " + String.valueOf(c));
+                resultOp.setText("Operation: +");
             }
         });
 
@@ -43,6 +50,30 @@ public class MainActivity extends AppCompatActivity {
                 int b = Integer.parseInt(input2.getText().toString());
                 int c = a - b;
                 result.setText("Result: " + String.valueOf(c));
+                resultOp.setText("Operation: -");
+            }
+        });
+
+        multBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int a = Integer.parseInt(input1.getText().toString());
+                int b = Integer.parseInt(input2.getText().toString());
+                int c = a * b;
+                result.setText("Result: " + String.valueOf(c));
+                resultOp.setText("Operation: x");
+            }
+        });
+
+        divBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                double a = Double.parseDouble(input1.getText().toString());
+                double b = Double.parseDouble(input2.getText().toString());
+                double c = a / b;
+                String strDouble = String.format("%.2f", c);
+                result.setText("Result: " + String.valueOf(strDouble));
+                resultOp.setText("Operation: /");
             }
         });
     }
